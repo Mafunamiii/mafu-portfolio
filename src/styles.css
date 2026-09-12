@@ -11,7 +11,7 @@ button { font: inherit; }
 .site-header { position: sticky; top: 0; z-index: 10; background: rgba(7, 19, 27, .9); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
 .nav { width: min(100% - 40px, 1140px); min-height: 67px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; letter-spacing: -.02em; white-space: nowrap; }
-.brand span { display: grid; place-items: center; width: 27px; height: 27px; color: var(--bg); background: var(--cyan); border-radius: 50%; font-family: 'DM Mono', monospace; font-size: .64rem; }
+.brand-logo { width: 29px; height: 29px; display: block; object-fit: contain; }
 .brand strong { font-weight: 600; }
 .nav-links { display: flex; align-items: center; gap: 25px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .63rem; text-transform: uppercase; letter-spacing: .06em; }
 .nav-links a { display: inline-flex; align-items: center; gap: 5px; transition: color .2s ease; }

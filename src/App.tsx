@@ -39,7 +39,7 @@ export default function App() {
     <div className="site-shell" id="top">
       <header className="site-header">
         <nav className="nav" aria-label="Main navigation">
-          <a className="brand" href="#top"><span>JA</span><strong>Jahnreil Amarillento</strong></a>
+          <a className="brand" href="#top"><img className="brand-logo" src="/images/MafuLogo.png" alt="Mafu logo" /><strong>Jahnreil Amarillento</strong></a>
           <div className="nav-links">
             <a href="#portfolio">Portfolio</a>
             <a href="mailto:amarillentojahnreil@gmail.com"><Mail size={14} /> Contact</a>
