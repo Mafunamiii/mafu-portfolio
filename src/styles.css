@@ -4,6 +4,12 @@
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body { margin: 0; min-width: 320px; background: var(--bg); }
 body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-events: none; opacity: .14; background: radial-gradient(ellipse at 78% 22%, rgba(30,113,116,.18), transparent 42%), linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.022) 1px, transparent 1px); background-size: auto, 56px 56px, 56px 56px; mask-image: linear-gradient(to bottom,black,transparent 78%); }
+/* Keep the cursor glow inside the page's isolated stack, above the opaque body background. */
+.site-shell::after { content: ''; position: fixed; z-index: -2; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(ellipse 54px 48px at var(--cursor-ambient-x,50vw) var(--cursor-ambient-y,45vh), rgba(47,131,130,.09) 0%, rgba(47,131,130,.065) 32%, rgba(47,131,130,.0275) 70%, transparent 100%), radial-gradient(ellipse 70px 48px at calc(var(--cursor-ambient-x,50vw) + 10px) calc(var(--cursor-ambient-y,45vh) - 6px), rgba(47,131,130,.045) 0%, rgba(47,131,130,.025) 48%, rgba(47,131,130,.008) 84%, transparent 100%), radial-gradient(ellipse 77px 68px at calc(var(--cursor-ambient-x,50vw) - 5px) calc(var(--cursor-ambient-y,45vh) + 7px), rgba(47,131,130,.012) 0%, rgba(47,131,130,.007) 58%, rgba(47,131,130,.002) 88%, transparent 100%); transition: opacity 180ms ease; }
+body.cursor-ambient-enabled .site-shell::after { opacity: 1; }
+@media (max-width: 767px), (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+ .site-shell::after { display: none; transition: none; }
+}
 a { color: inherit; text-decoration: none; }
 button { color: inherit; font: inherit; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--amber); outline-offset: 4px; }

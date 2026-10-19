@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-20 — Desktop cursor-following ambient glow
+
+- Added a cursor-following teal ambient glow on desktop, mounted as an isolated component with direct pointer positioning coalesced through `requestAnimationFrame`.
+- Kept the effect behind page content, disabled it for touch/coarse pointers and reduced-motion preferences, and cleaned up scheduled frames and event listeners when disabled or unmounted.
+- Refined the glow with offset elliptical gradients and feathered falloff; the latest adjustment halves the opacity at each stop while preserving its color, footprint, and immediate tracking.
+- Verified with TypeScript/Vite and production Docker builds. The public stylesheet and portfolio health were checked after deployment; no screenshot check was run for the latest opacity adjustment.
+
 ## 2026-10-19 — Portfolio interaction and mobile cube polish
 
 - Separated free cube rotation from category navigation, with pointer ownership and safe cancellation handling.
